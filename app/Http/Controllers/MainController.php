@@ -11,8 +11,9 @@ class MainController extends Controller
 
     public function index()
     {
-        $z = Movie::where('original_title', 'like', 'Gravity');
+        $movies = Movie::all();
+        // dd($movie[0]);
 
-        return view('home', compact('$z'));
+        return view('home', compact('movies'));
     }
 }

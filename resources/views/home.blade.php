@@ -18,6 +18,22 @@
 <body>
 
 
+    <div class="row">
+        @foreach ($movies as $m)
+            <div class="card">
+                <h3>
+                    {{ $m->title }}
+                </h3>
+                <p>
+                    Vote: {{ $m->vote }}
+                </p>
+                <p>
+                    Realese date: {{ $m->date }}
+                </p>
+            </div>
+        @endforeach
+    </div>
+
 
 </body>
 
